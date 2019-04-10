@@ -3,21 +3,19 @@ class UsersController < ApplicationController
 skip_before_action :verify_authenticity_token
   def create
 	@user = User.create(user_params)
-	format.json { render action: 'show', status: :created, location: @user }
+	render json: @user
   end
 
   def destroy
 	@user = User.find(params[:id]).destroy
-	respond_to do |format|
-		format.json { head :no_content }
-	end
+	head :no_content 
   end
 
   def update
 	respond_to do |format|
-		@user = User.update(user_params)
-		if User.update(user_params)
-			
+		if User.find(params[:id]).update(user_params)
+			@user = User.find(params[:id]).update(user_params)
+
 			format.json { head :no_content }
 		else
 			format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -31,11 +29,15 @@ skip_before_action :verify_authenticity_token
   end
 
   def user_params
-      params.require(:user).permit( :name, :last_name, :email, :phone_number, :password, :address )
+      params.require(:user).permit( :name, :lastname, :email, :phone_number, :password, :address )
+      #params.permit( :name, :last_name, :email, :phone_number, :password, :address )
   end
-private
+
   def set_user
     @user = User.find(params[:id])
   end
 
 end
+
+
+#{"user":{"name": "Isidora","lastname": "ramirez","email":"isi@mail.com","password": "123","address": "calle"}} ESTO SIRVE PARA CREAR

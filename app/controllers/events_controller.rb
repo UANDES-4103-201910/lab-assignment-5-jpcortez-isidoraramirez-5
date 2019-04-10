@@ -8,9 +8,8 @@ class EventsController < ApplicationController
 
   def destroy
 	@event = Event.find(params[:id]).destroy
-	respond_to do |format|
-		format.json { head :no_content }
-	end
+	head :no_content
+
   end
 
   def update

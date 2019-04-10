@@ -7,9 +7,7 @@ skip_before_action :verify_authenticity_token
 
   def destroy
 	@event_venue = EventVenue.find(params[:id]).destroy
-	respond_to do |format|
-		format.json { head :no_content }
-	end
+	format.json { head :no_content
   end
 
   def update

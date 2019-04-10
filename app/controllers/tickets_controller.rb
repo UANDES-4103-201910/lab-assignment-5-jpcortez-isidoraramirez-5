@@ -1,4 +1,5 @@
 class TicketsController < ApplicationController
+skip_before_action :verify_authenticity_token
   def create
 	@ticket = Ticket.create(params[:ticket_type_id], params[:order_id])
 	render json: @ticket
@@ -6,11 +7,14 @@ class TicketsController < ApplicationController
 
   def destroy
 	@ticket = Ticket.find(params[:id]).destroy
-	respond_to do |format|
-		format.json { head :no_content }
-	end
+	head :no_content
+
   end
 
+  def index
+	@ticket = Ticket.all
+	render json: @ticket
+  end
   def update
 	respond_to do |format|
 		if Ticket.update(params[:ticket_type_id], params[:order_id])

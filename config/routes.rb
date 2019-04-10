@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   #get 'users/create'
   #get 'users/destroy'
   #get 'users/update'
-  post '/tickets' => ' tickets#create'
+  post '/tickets' => 'tickets#create'
   delete '/tickets/:id' => 'tickets#destroy'
   put '/tickets/:id' => 'tickets#update'
   get '/tickets/:id' => 'tickets#show'
@@ -33,6 +33,10 @@ Rails.application.routes.draw do
   delete '/users/:id' => 'users#destroy'
   put '/users/:id' => 'users#update'
   get '/users/:id' => 'users#show'
+  
+  resources :ticket_types do
+  resources :tickets
+  end
  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
