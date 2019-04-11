@@ -1,7 +1,7 @@
 class EventVenuesController < ApplicationController
 skip_before_action :verify_authenticity_token
   def create
-	@event_venue = EventVenue.create(params[:name], params[:address], params[:capacity])
+	@event_venue = EventVenue.create(event_venue_params)
 	render json: @event_venue
   end
 
@@ -12,8 +12,8 @@ skip_before_action :verify_authenticity_token
 
   def update
 	respond_to do |format|
-		if EventVenue.update(params[:name], params[:address], params[:capacity])
-			@event_venue = EventVenue.update(params[:name], params[:address], params[:capacity])
+		if EventVenue.update(event_venue_params)
+			@event_venue = EventVenue.update(event_venue_params)
 			format.json { head :no_content }
 		else
 			format.json { render json: @event_venue.errors, status: :unprocessable_entity }
@@ -24,5 +24,10 @@ skip_before_action :verify_authenticity_token
   def show
 	@event_venue = EventVenue.find(params[:id])
         render json: @event_venue
+  end
+  private
+
+  def event_venue_params
+        params.require(:event_venue).permit(:id, :name, :address, :capacity)
   end
 end

@@ -28,12 +28,13 @@ Rails.application.routes.draw do
   delete '/events/:id' => 'events#destroy'
   put '/events/:id' => 'events#update'
   get '/events/:id' => 'events#show'
+  get '/upcoming_events' => 'events#upcoming_events'
 
   post '/users' => 'users#create'
   delete '/users/:id' => 'users#destroy'
   put '/users/:id' => 'users#update'
   get '/users/:id' => 'users#show'
- get '/user_with_most_tickets' => "users#user_with_most_tickets"
+  get '/user_with_most_tickets' => "users#user_with_most_tickets"
   
   resources :ticket_types do
   resources :tickets

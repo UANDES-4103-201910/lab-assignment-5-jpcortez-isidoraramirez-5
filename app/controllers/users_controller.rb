@@ -44,8 +44,8 @@ skip_before_action :verify_authenticity_token
   
   def user_with_most_tickets
 	@user = User.joins(:orders => :tickets).group(:user_id).order('COUNT(tickets.id) DESC').count.first
-	out = 'The user with id: ', @user.first, 'has ', @user.second, ' tickets'
-	render json: out
+	out = 'The user with id: ' "#{@user.first}" ' has ' "#{ @user.second}"' tickets'
+	render json: "#{out}"
 	#render json: @user
   end
 
