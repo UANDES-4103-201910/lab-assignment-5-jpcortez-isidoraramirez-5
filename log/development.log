@@ -6719,3 +6719,1178 @@ Processing by TicketsController#index as */*
 Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/" for ::1 at 2019-04-11 07:35:31 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/isidora/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/isidora/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/isidora/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 12ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hola" for ::1 at 2019-04-11 07:40:50 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/isidora/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/hola"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/hola" for ::1 at 2019-04-11 07:41:00 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"hola"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Completed 404 Not Found in 9ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=hola):
+  
+app/controllers/users_controller.rb:37:in `set_user'
+Started GET "/hola" for ::1 at 2019-04-11 07:41:27 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+Completed 406 Not Acceptable in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#user_with_most_tickets is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/hola" for ::1 at 2019-04-11 07:42:09 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+Completed 406 Not Acceptable in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#user_with_most_tickets is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/" for ::1 at 2019-04-11 07:57:52 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/isidora/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+Completed 404 Not Found in 10ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:37:in `set_user'
+Started GET "/users/" for ::1 at 2019-04-11 07:58:16 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:28
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/" for ::1 at 2019-04-11 07:58:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2019-04-11 07:59:20 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/hola" for ::1 at 2019-04-11 08:00:06 -0400
+  
+AbstractController::ActionNotFound (The action 'user_with_most_tickets' could not be found for UsersController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/hola" for ::1 at 2019-04-11 08:00:49 -0400
+Processing by UsersController#hola as HTML
+Completed 406 Not Acceptable in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#hola is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/hola" for ::1 at 2019-04-11 08:01:08 -0400
+Processing by UsersController#hola as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:42
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/h" for ::1 at 2019-04-11 08:01:37 -0400
+Processing by UsersController#hola as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:42
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-04-11 18:09:21 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/isidora/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/isidora/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/isidora/.rvm/gems/ruby-2.5.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 11ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/user_with_most_tickets" for ::1 at 2019-04-11 18:09:25 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"user_with_most_tickets"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Completed 404 Not Found in 7ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user_with_most_tickets):
+  
+app/controllers/users_controller.rb:37:in `set_user'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:09:56 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `limit' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:11:21 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `limits' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:11:39 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 406 Not Acceptable in 27ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#user_with_most_tickets is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.3) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.3) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:11:59 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:13:28 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `orser' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:13:36 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `order' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:14:08 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `order' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:47:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:14:39 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `limit' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:47:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:14:51 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.9ms)
+
+
+  
+NoMethodError (undefined method `limit' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:47:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:16:06 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `order' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:16:18 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:17:00 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `desc' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:17:22 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `desc' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:47:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:18:05 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `order' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:47:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:18:25 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:47: syntax error, unexpected ':'
+...son: @user.order(users.user_at: :desc).first
+...                              ^):
+  
+app/controllers/users_controller.rb:47: syntax error, unexpected ':'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:18:48 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46: syntax error, unexpected ':'
+..._id).count.order(users.user_at: :desc).first
+...                              ^):
+  
+app/controllers/users_controller.rb:46: syntax error, unexpected ':'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:19:10 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46: syntax error, unexpected ':'
+...d).count.order(orders.order_at: :desc).first
+...                              ^):
+  
+app/controllers/users_controller.rb:46: syntax error, unexpected ':'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:19:17 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46: syntax error, unexpected ':'
+...d).count.order(orders.order_at: :desc)
+...                              ^):
+  
+app/controllers/users_controller.rb:46: syntax error, unexpected ':'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:19:38 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `orders' for #<UsersController:0x000056207d6b1248>):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:19:47 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46: syntax error, unexpected ':'
+...d).count.order(orders.order_at: desc)
+...                              ^):
+  
+app/controllers/users_controller.rb:46: syntax error, unexpected ':'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:20:03 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `order_at' for :orders:Symbol):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:20:23 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46: syntax error, unexpected ':', expecting ')'
+...(:user_id).count.order(:users :desc)
+...                              ^):
+  
+app/controllers/users_controller.rb:46: syntax error, unexpected ':', expecting ')'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:20:33 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ser_id).count.order(:users desc)
+...                           ^~~~):
+  
+app/controllers/users_controller.rb:46: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:21:43 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:21:57 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `order' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:23:23 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:23:30 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `desc' for #<Enumerator:0x000056207f8ba4c0>):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:23:37 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `order' for #<Enumerator:0x000056207fd72620>):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:23:43 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `order_by' for #<Enumerator:0x00007f2b842b3098>):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:23:51 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `order_by' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:24:18 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `order_by' for 29:Integer):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:24:30 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:47
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:24:48 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:47
+Completed 200 OK in 23ms (Views: 17.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:24:50 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:47
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:25:08 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:25:35 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `order' for {1=>3, 2=>3, 3=>3, 4=>3, 5=>2, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3}:Hash):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:26:48 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(users.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(users.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:47
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:27:10 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(users.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(users.id) DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 25ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:27:19 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(users.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(users.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:27:35 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:27:46 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:27:52 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id"[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:28:23 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:28:39 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:28:52 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `limit' for {1=>3, 2=>3, 3=>3, 4=>3, 6=>3, 7=>3, 8=>3, 9=>3, 10=>3, 5=>2}:Hash):
+  
+app/controllers/users_controller.rb:46:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:29:18 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:29:45 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "users"."name" AS users_name FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "users"."name" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:30:00 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "users"."name" AS users_name FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "users"."name" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:30:21 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 2], ["created_at", "2019-04-11 22:34:18.571187"], ["updated_at", "2019-04-11 22:34:18.571187"]]
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTicketType Load (0.3ms)[0m  [1m[34mSELECT  "ticket_types".* FROM "ticket_types" WHERE "ticket_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mTicket Create (0.4ms)[0m  [1m[32mINSERT INTO "tickets" ("ticket_type_id", "order_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ticket_type_id", 1], ["order_id", 31], ["created_at", "2019-04-11 22:35:27.318216"], ["updated_at", "2019-04-11 22:35:27.318216"]]
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:35:37 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/isidora/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:37:14 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 15ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/users_controller.rb:48:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:37:25 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 11ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/users_controller.rb:48:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:39:05 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:47: syntax error, unexpected '}', expecting =>
+	out = {'The user with id: '}.to_json
+	                           ^):
+  
+app/controllers/users_controller.rb:47: syntax error, unexpected '}', expecting =>
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:40:29 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 10ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/users_controller.rb:49:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:40:54 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected '\n', expecting =>
+...: '"The user with id: "', @user
+...                               ^):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected '\n', expecting =>
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:41:26 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.2ms)
+
+
+  
+TypeError (no implicit conversion of Array into String):
+  
+app/controllers/users_controller.rb:48:in `+'
+app/controllers/users_controller.rb:48:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:42:47 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected '\n', expecting =>
+...ser with id: "'.to_json , @user
+...                               ^):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected '\n', expecting =>
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:43:01 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:43:10 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:43:16 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected '\n', expecting =>
+...user with id: '.to_json , @user
+...                               ^):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected '\n', expecting =>
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:43:27 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected '\n', expecting =>
+... user with id: '.to_json, @user
+...                               ^):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected '\n', expecting =>
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:43:48 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms)
+
+
+  
+TypeError (no implicit conversion of Integer into String):
+  
+app/controllers/users_controller.rb:48:in `+'
+app/controllers/users_controller.rb:48:in `user_with_most_tickets'
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:43:56 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected '\n', expecting =>
+...ith id: '.to_json , @user.first
+...                               ^):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected '\n', expecting =>
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:44:20 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected ',', expecting =>
+...{'The user with id: '.to_json , @user.first}
+...                              ^
+/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected '}', expecting keyword_end
+...th id: '.to_json , @user.first}
+...                              ^):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:48: syntax error, unexpected '}', expecting keyword_end
+Started POST "/__web_console/repl_sessions/a71a748ba5e09db3b0511564adf320e0/trace" for ::1 at 2019-04-11 18:44:30 -0400
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:44:42 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected tIVAR, expecting =>
+... user with id: '.to_json  @user.first}
+...                          ^~~~~
+/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected '}', expecting keyword_end
+...ith id: '.to_json  @user.first}
+...                              ^):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected tIVAR, expecting =>
+app/controllers/users_controller.rb:48: syntax error, unexpected '}', expecting keyword_end
+Started POST "/__web_console/repl_sessions/e9da8696727249ce0046f4f2c0fab87a/trace" for ::1 at 2019-04-11 18:44:45 -0400
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:45:23 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected =>
+	render json: => {'The user with id: '.to_jso...
+	             ^~
+/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected ',', expecting =>
+... {'The user with id: '.to_json,  @user.first}
+...                              ^
+/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:48: syntax error, unexpected '}', expecting keyword_end
+...th id: '.to_json,  @user.first}
+...                              ^):
+  
+app/controllers/users_controller.rb:48: syntax error, unexpected =>
+app/controllers/users_controller.rb:48: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:48: syntax error, unexpected '}', expecting keyword_end
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:46:38 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:47: syntax error, unexpected '}', expecting =>
+	out = {'"The user with id: "'}.to_json, @user.first
+	                             ^
+/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:47: syntax error, unexpected '\n', expecting '='
+...th id: "'}.to_json, @user.first
+...                               ^):
+  
+app/controllers/users_controller.rb:47: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:47: syntax error, unexpected '\n', expecting '='
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:46:52 -0400
+  
+SyntaxError (/home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:47: syntax error, unexpected '}', expecting =>
+	out = {'"The user with id: "'}, @user.first
+	                             ^):
+  
+app/controllers/users_controller.rb:47: syntax error, unexpected '}', expecting =>
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:47:11 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:47:39 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user_with_most_tickets" for ::1 at 2019-04-11 18:47:58 -0400
+Processing by UsersController#user_with_most_tickets as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "COUNT(tickets.id) DESC". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from user_with_most_tickets at /home/isidora/Desktop/lab-assignment-5-jpcortez-isidoraramirez-5/app/controllers/users_controller.rb:46)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "user_id" AS user_id FROM "users" INNER JOIN "orders" ON "orders"."user_id" = "users"."id" INNER JOIN "tickets" ON "tickets"."order_id" = "orders"."id" GROUP BY "user_id" ORDER BY COUNT(tickets.id) DESC[0m
+  ↳ app/controllers/users_controller.rb:46
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+

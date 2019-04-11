@@ -8,13 +8,13 @@ skip_before_action :verify_authenticity_token
   def destroy
 	@ticket = Ticket.find(params[:id]).destroy
 	head :no_content
-
   end
 
   def index
 	@ticket = Ticket.all
 	render json: @ticket
   end
+
   def update
 	respond_to do |format|
 		if Ticket.update(params[:ticket_type_id], params[:order_id])

@@ -33,10 +33,13 @@ Rails.application.routes.draw do
   delete '/users/:id' => 'users#destroy'
   put '/users/:id' => 'users#update'
   get '/users/:id' => 'users#show'
+ get '/user_with_most_tickets' => "users#user_with_most_tickets"
   
   resources :ticket_types do
   resources :tickets
   end
+
+
  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
